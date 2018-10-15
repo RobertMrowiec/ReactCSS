@@ -1,27 +1,48 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import './App.scss';
+import Welcome from './components/welcome';
+import Toolbar from './components/toolbar';
+import Services from './components/services';
+import Portfolio from './components/portfolio';
+import Team from './components/team';
+import {BrowserRouter as Router, Route} from 'react-router-dom'
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+      <Router>
+
+        <div class='main'>
+          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous"/>
+
+          <div>
+            <Toolbar/>
+          </div>
+
+          <div>
+            <Welcome /> 
+          </div>
+
+          <div>
+            <Services /> 
+          </div>
+
+          <div>
+            <Portfolio /> 
+          </div>
+
+          <div>
+            <Team /> 
+          </div>
+
+          <Route exact path="/" component={Welcome} />
+          <Route path="/services" component={Services} />
+          <Route path="/portfolio" component={Portfolio} />
+          <Route path="/team" component={Team} />
+
+        </div>
+      </Router>
+
+    )
   }
 }
 
