@@ -34,7 +34,6 @@ class App extends Component {
             <Team /> 
           </div>
 
-          <Route exact path="/" component={Welcome} />
           <Route path="/services" component={Services} />
           <Route path="/portfolio" component={Portfolio} />
           <Route path="/team" component={Team} />
