@@ -5,6 +5,7 @@ section {
 .main {
   text-align: center;
 }
+
 .services {
   .container {
     h2 {
@@ -28,7 +29,7 @@ section {
       };
       h4 {
         padding-top: 20px;
-        font-size: 23px
+        font-size: 23px;
       }
       p {
         font-size: 18px;
@@ -62,7 +63,7 @@ h1, h2, h3 {
 }
 
 .page-header{
-  position: fixed;
+  position: absolute;
   right: 0;
   left:0 ;
   .container {
@@ -127,18 +128,90 @@ h1, h2, h3 {
   justify-content: center;
 }
 
+.team {
+  align-items: center;
+  // background-color: rgba(0,0,0,0.07);
+  .container {
+    h2 {
+      font-weight: 600;
+      font-size: 50px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      text-transform: uppercase
+    }
+    h3 {
+      font-size: 18px;
+      font-weight: lighter;
+      color: rgb(175, 167, 167);
+      font-family: Apple Chancery, cursive;
+      text-shadow: 0.1px 0.1px 0.1px #a8a3a3;
+      padding-bottom: 75px;
+    }
+    .team-list {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      .team__member {
+        flex: 0 0 calc(100% / 5 - 20px);
+        img {
+          width: 300px;
+          padding: 0px 20px;
+          border-radius: 50%
+        }
+        .team__name {
+          padding: 15px 0 5px 0;
+          font-size: 18px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
 .portfolio {
   display: flex;
   background-color: rgba(0,0,0,0.07);
+  h2 {
+    font-weight: 600;
+    font-size: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase
+  }
+  h3 {
+    font-size: 18px;
+    font-weight: lighter;
+    color: rgb(175, 167, 167);
+    font-family: Apple Chancery, cursive;
+    text-shadow: 0.1px 0.1px 0.1px #a8a3a3;
+    padding-bottom: 75px;
+  }
   .portfolio-list {
     display: flex;
     flex-wrap: wrap;
     .portfolio__item {
+      padding: 0 10px 30px 10px;
       text-align: center;
       flex: 0 0 calc(100% / 3 - 20px);
       margin:0 10px 10px; 
       img {
+        display: block;
         min-width: 100%;
+      }
+      div {
+        background-color: white;
+      }
+      .portfolio__title {
+        padding-top: 10px;
+        font-size: 23px;
+        font-weight: bold;
+      }
+      .portfolio__category {
+        font-size: 18px;
+        font-weight: lighter;
+        color: rgb(175, 167, 167);
+        font-family: Apple Chancery, cursive;
+        text-shadow: 0.1px 0.1px 0.1px #a8a3a3;
+        padding-bottom: 20px;
       }
     }
   }
@@ -148,6 +221,7 @@ h1, h2, h3 {
   font-family: cursive, sans-serif ;
   font-size: 45px
 }
+
 .typewrite {
   color: #fff;
   font-family: monospace;
