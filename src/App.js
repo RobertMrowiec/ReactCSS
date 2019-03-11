@@ -22,21 +22,21 @@ class App extends Component {
             <Welcome /> 
           </div>
 
-          <div>
+          {/* <div id='services'>
             <Services /> 
-          </div>
+          </div> */}
+ 
+           {/* <div id='portfolio'>
+             <Portfolio /> 
+           </div> */}
 
-          <div>
-            <Portfolio /> 
-          </div>
+           {/* <div id='team'>
+             <Team /> 
+           </div> */}
 
-          <div>
-            <Team /> 
-          </div>
-
-          <Route path="/services" component={Services} />
+          {/* <Route path="/services" component={Services} />
           <Route path="/portfolio" component={Portfolio} />
-          <Route path="/team" component={Team} />
+          <Route path="/team" component={Team} /> */}
 
         </div>
       </Router>
